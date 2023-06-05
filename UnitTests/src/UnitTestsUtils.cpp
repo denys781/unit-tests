@@ -6,12 +6,12 @@ std::vector<std::uint16_t> BowlingGameTest::m_rolls = {};
 
 void BowlingGameTest::SetUpTestSuite()
 {
-    const std::initializer_list<std::uint16_t> il
-    {
-        10, 5, 5, 10, 3, 2, 6, 4, 10, 1, 8, 1, 2, 3, 4, 8, 2
-    };
+    m_rolls.assign({ 10, 5, 5, 10, 3, 2, 6, 4, 10, 1, 8, 1, 2, 3, 4, 8, 2 });
+}
 
-    m_rolls.assign(il);
+std::vector<std::uint16_t> BowlingGameTest::GetAdditionalRollsSet()
+{
+    return { 7, 3, 10, 4, 5, 10, 2, 2, 3, 6, 10, 9, 1, 10, 5, 5 };
 }
 
 ::testing::AssertionResult

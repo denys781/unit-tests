@@ -31,6 +31,10 @@ TEST_F(BowlingGameTest, IsFrameScoreCalculatedCorrectly)
 TEST_F(BowlingGameTest, IsGameScoreCalculatedCorrectly)
 {
     EXPECT_TRUE(IsGameScoreCalculated(m_rolls, 128));
+
+    const auto additionalRollsSet(GetAdditionalRollsSet());
+
+    EXPECT_TRUE(IsGameScoreCalculated(additionalRollsSet, 145));
 }
 
 int main(int argc, char** argv)

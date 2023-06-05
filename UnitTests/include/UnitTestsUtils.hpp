@@ -10,6 +10,7 @@ class BowlingGameTest : public ::testing::Test
 {
 protected:
     static void SetUpTestSuite();
+    static std::vector<std::uint16_t> GetAdditionalRollsSet();
 
 protected:
     static std::vector<std::uint16_t> m_rolls;
