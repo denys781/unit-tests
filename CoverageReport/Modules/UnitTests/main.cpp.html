@@ -41,7 +41,11 @@
 
 <span style = "background-color:#dfd">TEST_F(BowlingGameTest, IsGameScoreCalculatedCorrectly)
 {
-    EXPECT_TRUE(IsGameScoreCalculated(m_rolls, 128));
+    EXPECT_TRUE(IsGameScoreCalculated(m_rolls, 128));</span>
+
+<span style = "background-color:#dfd">    const auto additionalRollsSet(GetAdditionalRollsSet());</span>
+
+<span style = "background-color:#dfd">    EXPECT_TRUE(IsGameScoreCalculated(additionalRollsSet, 145));
 }</span>
 
 int main(int argc, char** argv)

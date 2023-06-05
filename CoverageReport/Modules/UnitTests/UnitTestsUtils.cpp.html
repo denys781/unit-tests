@@ -16,13 +16,13 @@
 <span style = "background-color:#dfd">std::vector&lt;std::uint16_t&gt; BowlingGameTest::m_rolls = {};</span>
 
 void BowlingGameTest::SetUpTestSuite()
-<span style = "background-color:#dfd">{</span>
-    const std::initializer_list&lt;std::uint16_t&gt; il
-<span style = "background-color:#dfd">    {</span>
-        10, 5, 5, 10, 3, 2, 6, 4, 10, 1, 8, 1, 2, 3, 4, 8, 2
-    };
+<span style = "background-color:#dfd">{
+    m_rolls.assign({ 10, 5, 5, 10, 3, 2, 6, 4, 10, 1, 8, 1, 2, 3, 4, 8, 2 });
+}</span>
 
-<span style = "background-color:#dfd">    m_rolls.assign(il);
+std::vector&lt;std::uint16_t&gt; BowlingGameTest::GetAdditionalRollsSet()
+<span style = "background-color:#dfd">{
+    return { 7, 3, 10, 4, 5, 10, 2, 2, 3, 6, 10, 9, 1, 10, 5, 5 };
 }</span>
 
 ::testing::AssertionResult
